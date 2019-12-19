@@ -4,7 +4,7 @@ layout: default
 <article class="post">
     <h2 class="post-header">{{ page.title }}</h2>
     <p class="post-meta">{{ page.date | date: site.date_format }}</p>
-    {% include anchor_headings.html html=content %}
+    {{content}}
     {% if site.disqus_shortname %}
       <div id="disqus_thread"></div>
       <script type="text/javascript">

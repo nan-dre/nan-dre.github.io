@@ -1,4 +1,12 @@
-I"š<p>Vida is a simple and beautiful jekyll theme, it has only the essential functions
+I"‚<ol>
+  <li><a href="#header-1">Header 1</a></li>
+  <li><a href="#header-2">Header 2</a></li>
+  <li><a href="#header-3">Header 3</a></li>
+  <li><a href="#header-4">Header 4</a></li>
+  <li><a href="#header-5">Header 5</a></li>
+</ol>
+
+<p>Vida is a simple and beautiful jekyll theme, it has only the essential functions
 so that you can concentrate on the content of your blog.</p>
 
 <p>First of all, letâ€™s have a glance at the basic styles: <a href="http://github.com/syaning/vida">link</a>,

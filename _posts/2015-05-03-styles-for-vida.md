@@ -3,6 +3,12 @@ layout: post
 title:  Styles for vida
 date:   2015-05-03 10:30:00
 ---
+1. [Header 1](#header-1)
+2. [Header 2](#header-2)
+3. [Header 3](#header-3)
+4. [Header 4](#header-4)
+5. [Header 5](#header-5)
+
 
 Vida is a simple and beautiful jekyll theme, it has only the essential functions
 so that you can concentrate on the content of your blog.
