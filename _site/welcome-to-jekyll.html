@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/main.css">
+    <script src="http://localhost:4000/assets/js/check-mode.js"></script>
     <title>Blog</title>
 </head>
+
 <body>
     <main>
         <header class="site-header">
+            <div class="button-container">
+              <a id="theme-toggle" class="theme-toggle-button"onclick="modeSwitcher()">Dark Mode</button>
+            </div>
             <h1 class="site-title"><a href="/">Blog</a></h1>
             <nav class="site-nav">
                 <a href="/sample/" class="">Sample</a>
@@ -48,6 +53,6 @@
 </article>
 
     </main>
-    
 </body>
+<script src="http://localhost:4000/assets/js/change-mode.js"></script>
 </html>

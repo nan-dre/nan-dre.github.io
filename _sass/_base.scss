@@ -1,18 +1,52 @@
 @charset "utf-8";
+
+html[data-theme='light'] {
+  --bg: #fff;
+  --bg-secondary: #fcfcfc;
+  --headings: #050532;
+  --text: #101010;
+}
+
+html[data-theme='dark'] {
+  --bg: #080808;
+  --bg-secondary: #444;
+  --headings: #5269a2;
+  --text: #bbb;
+}
+
+
+body {
+    background-color: var(--bg);
+}
+
+.container {
+    background-color: var(--bg-secondary);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--headings);
+}
+
+p, strong, b, em, span, code, small {
+    color: var(--text);
+}
+
+
 body {
     margin: 0;
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    color: $text-color;
+    color: --text;
 }
 p {
     text-align: justify;
     word-break: break-word;
 }
 a {
-    color: $link-color;
+    color: --text;
     text-decoration: none;
+    cursor:pointer;
     &:hover {
         text-decoration: underline;
     }
@@ -25,6 +59,7 @@ h5,
 h6 {
     font-weight: 300;
     word-break: break-word;
+
 }
 blockquote {
     font-style: italic;
@@ -65,4 +100,74 @@ code {
 hr {
     border: none;
     border-top: 2px solid $border-color;
+}
+
+@charset "utf-8";
+
+
+main {
+    max-width: 48rem;
+    margin: 0 auto 3rem;
+    padding: 0 2rem;
+}
+.site-header {
+    .site-title {
+        font-weight: 300;
+        > a {
+            color: --headings;
+            text-decoration: none;
+        }
+    }
+    .site-nav {
+        > a {
+            color: --text;
+            &:hover {
+                text-decoration: none;
+            }
+            &.active {
+                border-bottom: 2px solid #666;
+            }
+            + a {
+                margin-left: 1rem;
+            }
+        }
+    }
+}
+.posts {
+    list-style: none;
+    padding: 0;
+    > li {
+        line-height: 1.75;
+        span {
+            color: --text;
+            margin-right: 1.5rem;
+            font-size: $small-font-size;
+        }
+        a {
+            color: --text;
+            text-decoration: none;
+        }
+    }
+}
+.post {
+    position: relative;
+    .post-header {
+        text-align: center;
+        font-size: xx-large;
+        margin-bottom: 0;
+    }
+    .post-meta {
+        margin: 0;
+        text-align: center;
+        color: $meta-color;
+        font-size: $small-font-size;
+    }
+}
+@media screen and (max-width: 48rem) {
+    .site-header {
+        .site-title,
+        .site-nav {
+            text-align: center;
+        }
+    }
 }

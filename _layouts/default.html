@@ -3,12 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/main.css">
+    <script src="{{ base.url | prepend: site.url }}/assets/js/check-mode.js"></script>
     <title>{{ site.title }}</title>
 </head>
+
 <body>
     <main>
         <header class="site-header">
+            <div class="button-container">
+              <a id="theme-toggle" class="theme-toggle-button"onclick="modeSwitcher()">Dark Mode</button>
+            </div>
             <h1 class="site-title"><a href="{{ site.baseurl }}/">{{ site.title }}</a></h1>
             <nav class="site-nav">
                 <a href="{{ site.baseurl }}/sample/" class="{% if page.url == '/sample/' %}active{% endif %}">Sample</a>
@@ -17,15 +22,6 @@
         </header>
         {{ content }}
     </main>
-    {% if site.google_analytics %}
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', '{{ site.google_analytics }}', 'auto');
-        ga('send', 'pageview');
-    </script>
-    {% endif %}
 </body>
+<script src="{{ base.url | prepend: site.url }}/assets/js/change-mode.js"></script>
 </html>

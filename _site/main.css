@@ -33,11 +33,23 @@
 
 .maroon { color: #85144b; }
 
-body { margin: 0; font-family: Merriweather, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: #333; }
+html[data-theme='light'] { --bg: #fff; --bg-secondary: #fcfcfc; --headings: #050532; --text: #101010; }
+
+html[data-theme='dark'] { --bg: #080808; --bg-secondary: #444; --headings: #5269a2; --text: #bbb; }
+
+body { background-color: var(--bg); }
+
+.container { background-color: var(--bg-secondary); }
+
+h1, h2, h3, h4, h5, h6 { color: var(--headings); }
+
+p, strong, b, em, span, code, small { color: var(--text); }
+
+body { margin: 0; font-family: Merriweather, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: --text; }
 
 p { text-align: justify; word-break: break-word; }
 
-a { color: #0074d9; text-decoration: none; }
+a { color: --text; text-decoration: none; cursor: pointer; }
 
 a:hover { text-decoration: underline; }
 
@@ -65,9 +77,9 @@ main { max-width: 48rem; margin: 0 auto 3rem; padding: 0 2rem; }
 
 .site-header .site-title { font-weight: 300; }
 
-.site-header .site-title > a { color: #333; text-decoration: none; }
+.site-header .site-title > a { color: --headings; text-decoration: none; }
 
-.site-header .site-nav > a { color: #333; }
+.site-header .site-nav > a { color: --text; }
 
 .site-header .site-nav > a:hover { text-decoration: none; }
 
@@ -79,9 +91,9 @@ main { max-width: 48rem; margin: 0 auto 3rem; padding: 0 2rem; }
 
 .posts > li { line-height: 1.75; }
 
-.posts > li span { color: #a0a0a0; margin-right: 1.5rem; font-size: 0.875rem; }
+.posts > li span { color: --text; margin-right: 1.5rem; font-size: 0.875rem; }
 
-.posts > li a { color: #333; text-decoration: none; }
+.posts > li a { color: --text; text-decoration: none; }
 
 .post { position: relative; }
 
