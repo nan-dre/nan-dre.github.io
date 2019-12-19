@@ -1,4 +1,4 @@
-title: vida
+title: Blog
 baseurl: ""
 
 date_format: "%Y-%m-%d"
@@ -7,9 +7,8 @@ date_format: "%Y-%m-%d"
 kramdown:
   input: GFM
 permalink: /:categories/:title
-emptyArray: []
 
-# Third-party services
-# just leave someone empty to disable it
+#leave empty for disabled
+
 google_analytics:
 disqus_shortname:

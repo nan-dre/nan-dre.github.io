@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/main.css">
-    <title>vida</title>
+    <title>Blog</title>
 </head>
 <body>
     <main>
         <header class="site-header">
-            <h1 class="site-title"><a href="/">vida</a></h1>
+            <h1 class="site-title"><a href="/">Blog</a></h1>
             <nav class="site-nav">
                 <a href="/sample/" class="">Sample</a>
                 <a href="/about/" class="">About</a>
@@ -23,61 +23,6 @@
 <p>Nunc interdum ac justo in molestie. Pellentesque in massa non mi bibendum maximus. Nullam leo orci, fringilla a dapibus sed, tristique sit amet nunc. Suspendisse lacinia lacinia eros rutrum luctus. Nullam ut augue maximus, mattis lacus non, venenatis lorem. Pellentesque augue dolor, rhoncus eu consectetur commodo, ullamcorper ut nisi. Sed at velit blandit, condimentum risus rhoncus, rutrum tellus. Morbi eu euismod eros, at auctor magna. Nullam at vulputate dolor. Phasellus ut sem iaculis, volutpat justo sit amet, faucibus metus. Sed rhoncus varius ligula, ut lacinia turpis imperdiet elementum. Vestibulum vulputate imperdiet porta. Praesent sed iaculis tortor. Cras efficitur erat ac massa feugiat ultrices. Praesent convallis diam eu erat convallis laoreet non a est. Vestibulum sed est arcu.</p>
 
     
-
-
-
-
-
-
-
-<h3>Respond to this</h3>
-<form action="/fake" method="post" id="commentform" class="form-horizontal">
-  <fieldset id="commentfields">
-    <input name="redirect" type="hidden" value="http://localhost:4000/thanks">
-    <input name="post_id" type="hidden" value="test1">
-    <input name="comment-site" type="hidden" value="http://localhost:4000">
-    <textarea name="message" id="message" placeholder="Continue the discussion."></textarea>
-
-    <label for="name">Name/alias <span>(Required, displayed)</span></label>
-    <input type="text" name="name" id="name" placeholder="Name" />
-
-    <label for="email">Email <span>(Required, not shown)</span></label>
-    <input type="text" name="email" id="email" placeholder="myemail@somedomain.com" />
-
-    <label for="url">Website <span>(Optional, displayed)</span></label>
-    <input type="text" name="url" id="url" placeholder="https://mywebsite.com" />
-
-    <button onclick="setupForm()" type="button" class="btn btn-primary" id="commentbutton">Leave response</button>
-  </fieldset>
-</form>
-<script>
-    function setupForm() {
-      var status = document.getElementById('commentstatus')
-      status.innerText = ''
-      var requiredIds = [ 'message', 'email', 'name']
-      var missing = requiredIds.filter(id => document.getElementById(id).value.length < 3)
-      if (missing.length > 0) {
-        status.innerText = 'Some required fields are missing - (' + missing.join(', ') + ')'
-        return
-      }
-      var button = document.getElementById('commentbutton')
-      if (button.innerText != 'Confirm comment') {
-        button.innerText = 'Confirm comment'
-        return
-      }
-      var form = document.getElementById('commentform')
-      form.action = ''
-      button.innerText = 'Posting...'
-      button.disabled = true
-      form.submit()
-      var fields = document.getElementById('commentfields')
-      fields.disabled = true
-    }
-  </script>
-<div id="commentstatus" style="clear:both" class="status"></div>
-
-
-
 </article>
 
     </main>
