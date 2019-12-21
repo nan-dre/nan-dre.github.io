@@ -1,4 +1,4 @@
-title: Blog
+title: Luca's Blog
 baseurl: ""
 
 date_format: "%Y-%m-%d"
@@ -7,11 +7,11 @@ date_format: "%Y-%m-%d"
 kramdown:
   input: GFM
   auto_ids: true
-permalink: /:categories/:title
+permalink: pretty
 
 github:
 twitter:
 
 #leave empty for disabled
 
-disqus_shortname: luca-10
+disqus_shortname: #fill this in for comments

@@ -1,0 +1,119 @@
+I"�)<h1 id="contents">Contents</h1>
+<ol>
+  <li><a href="/2019/12/21/Section-list-example/#introduction">Introduction</a></li>
+</ol>
+
+<h1 id="introduction">Introduction</h1>
+
+<p>The aim of this article is to provide a series of good general advice and considerations on how to design and write libraries, particularly if portability, ease of use and performance are of concern.</p>
+
+<p>The word “game” is in parentheses since most of the advice also applies to non-game libraries.</p>
+
+<p>Bear in mind that there is no “true way” to write a library and different people have different opinions, however, there do exist general advice and considerations that can be examined based on existing work.</p>
+
+<p>The advice and considerations presented in this article are not meant for all kinds of libraries, for example, for libraries such as language-specific containers or wrappers around os functionality, some of the advice may not apply. Remember that when designing a library you should understand your requirements and do what you find to be the best approach, this article acts simply as a non-exhaustive list of good considerations and advice.</p>
+
+<p>This article aims to present advice based on existing libraries that are considered of quality in the community so that developers can better understand some of the considerations involved in designing a library. The list does not aim to be exhaustive, but hopefully, it can be updated to include more advice and considerations over time and serves as a starting point and educational resource to anyone interested in library design.</p>
+
+<p>The core principles of this advice are:</p>
+
+<p>Maximize portability.</p>
+
+<p>Be easy to build.</p>
+
+<p>Be easy to integrate.</p>
+
+<p>Be usable in as many scenarios as possible.</p>
+
+<h1 id="consider-writing-the-library-in-c-and-add-wrappers-to-other-languages-later">Consider writing the library in C and add wrappers to other languages later.</h1>
+<h2 id="c-is-the-lingua-franca-of-programming-there-are-many-advantages-to-writing-your-library-in-c-from-the-start">C is the lingua franca of programming. There are many advantages to writing your library in C from the start:</h2>
+
+<p>Every language out there has a way to call into C, so if you write your library in C everyone will be able to use it, in any language, and people can write wrappers for it easily. If you write a library in Python, chances are most people won’t be able to use it if they don’t also use Python. If you write a library in C however, someone who really likes it can make bindings for it in Python. C truly brings all of us together.</p>
+
+<p>C code is usually fast. There is a saying that if your code is slower than C, someone will rewrite it in C. Performance is especially important for game developers and people who use low-level languages in general.</p>
+
+<p>C is the most portable language in the world, if your library is written in C it means it can be used on any OS, console or mobile device and even on the web.</p>
+
+<h2 id="you-might-also-consider-writing-the-library-in-c-be-mindful-however-of-the-following-drawbacks">You might also consider writing the library in C++, be mindful however of the following drawbacks:</h2>
+
+<p>It is easier in general for a C++ user to use a C library than it is for a C user to use a C++ library.</p>
+
+<p>C++ is not as easy to write wrappers for in other languages.</p>
+
+<p>If you use C++, unless you limit which C++ features you use (to the point where you are pretty much left with C) a lot of people won’t be able to use your library. Not everyone uses RAII, some people disable exceptions and RTTI, and not everyone is willing to use a library with smart pointers, template metaprogramming, STL allocators, virtual dispatch, etc.</p>
+
+<h2 id="take-into-account-the-following-aspects-when-writing-your-c-library">Take into account the following aspects when writing your C library:</h2>
+
+<p>Compiler extensions make your code less portable, try using the subset of C99 which compiles both in C and C++ mode on GCC, Clang, and MSVC. This is important since some compilers (such as MSVC) have problems with supporting C.</p>
+
+<p>Try not to use the hosted (OS-dependent) parts of the C standard library, unless you really have to, since they might work differently on other platforms (or might not work at all). If you need to use OS-dependent functions but want to maximize portability, request function pointers from the client.</p>
+
+<p>Prefix your names to avoid name collisions (more on this later).</p>
+
+<p>For maximum portability consider using the built-in C types (char, short, int, long). This is because not all compilers and platforms have support for stdint.h (eg: old versions of MSVC). Try checking for the availability of stdint.h and use that if available. As an example consider looking at how the library stb_image handles the use of stdint.h.</p>
+
+<p>Consider using header guards instead of #pragma once. Header guards are standard and also allow the user of the library to check if a library was included.</p>
+
+<p>Undef macros that should not be exposed to the user at the end (eg: my_min/max macros), do this even in C files.</p>
+
+<p>Make sure your library can compile as one compilation unit since a lot of developers choose to do single-compilation-unit builds (also known as unity builds).</p>
+
+<h2 id="if-you-want-to-use-another-language-for-the-implementation-consider-keeping-the-interface-in-c">If you want to use another language for the implementation, consider keeping the interface in C.</h2>
+
+<p>If you want to write a library using another language, such as Odin, Rust, Zig, C++, etc, consider keeping the interface in C so that people can easily use it and wrap it for other languages.</p>
+
+<p>Bear in mind that this has several disadvantages:</p>
+
+<p>People might have a harder time integrating your library into their projects as source.</p>
+
+<p>You might be adding the standard library of your language of choice as an extra dependency that the user of your library now needs to consider. This can also have other implications, for example, some standard libraries use the general heap allocator, which violates the principle of giving the user of the library full control over memory allocations (more on this later). Also interfacing with certain aspects of a standard library from another language via a C API could be awkward.</p>
+
+<p>You might need to provide precompiled binaries or ways for your users to build your library for their target platform. This might not be an issue with C++ but it can be with other languages (eg: Odin, Zig, Rust).</p>
+
+<p>If people don’t use the same language for their projects their debugging experience might suffer when using your library.</p>
+
+<h1 id="consider-providing-an-optional-c-wrapper">Consider providing an optional C++ wrapper.</h1>
+
+<p>Besides C users, C++ users are the ones most likely to use your C library. To that extent, you might want to consider making their experience better by providing a C++ wrapper.</p>
+
+<p>Take into consideration that this is an extra piece of code you would have to maintain but that can help the adoption of your library by C++ developers.</p>
+
+<h2 id="basic-things-you-can-do-when-writing-your-c-wrapper">Basic things you can do when writing your C++ wrapper:</h2>
+
+<p>Use .hpp and .cpp for your C++ wrapper to distinguish between the C and C++ code. Consider putting the C++ wrapper in another folder or repo and mention it in the readme.</p>
+
+<p>Try not to include the header from the C version in the hpp file. Instead, rewrite the declarations in the hpp in a more C++ style and in the cpp file include the C header and provide the definitions for all the wrapper functions. This is to prevent the names from C and macros to spill into C++ code.</p>
+
+<p>Expose constants to the user using constexpr variables. This is especially easy since C structs are constexpr by default. Make sure constants from C that use macros are not present in the C++ wrapper.</p>
+
+<p>Use namespaces and wrap all the functions like so namespace mylib { foo bar() { return mylib_bar(); }.</p>
+
+<p>Try not to use exceptions and RTTI. Especially in game development, not all people use them and some just disable them.</p>
+
+<p>Consider using default parameter values over function wrappers. C lacks default values for parameters so usually, people write a function with a lot of parameters and then create several wrappers for it that calls the original function with different default parameter values. C++ has default parameter values so consider removing the extra wrapper functions if you have any.</p>
+
+<p>Try not to use STL containers or smart pointers since your wrapper should just simply wrap the functions from C and also adding those that bring extra problems that you need to consider. (More on this later)</p>
+
+<p>If you decide to offer RAII wrappers for parts of your library, still provide wrappers for the non-RAII structs and functions. This is important because not all developers use RAII and if you don’t expose the non-RAII versions of structs and functions in your C++ layer they won’t be able to use it, at least not fully.</p>
+
+<h1 id="try-not-to-make-the-use-of-a-build-system-mandatory">Try not to make the use of a build system mandatory.</h1>
+
+<p>There are many build systems out there and chances are people won’t use the same one you do. If your library simply presents the source files, the header files and a list of the dependencies (if you have any), this will help developers integrate your library into their projects.</p>
+
+<p>If there are compiler flags needed to compile your library then you can mention them in the readme, though preferably there won’t be any.</p>
+
+<p>It is good to include optional build files, but mention in the readme that they are optional and try to keep the simple structure that lets people integrate the library easily with their preferred build system.</p>
+
+<p>If you do use a build system such as CMake or Make, try to use them in a standard way so that developers who choose to use them can get the most out of them.</p>
+
+<h1 id="ensure-that-people-can-easily-compile-the-library-from-source">Ensure that people can easily compile the library from source.</h1>
+
+<p>Distribute your libraries such that people can simply include the source files in their project and be done with it.</p>
+<h2 id="this-has-many-advantages-such-as">This has many advantages such as:</h2>
+
+<p>Letting people easily reason about your library.</p>
+
+<p>Easy to include in cross-platform projects, no craziness regarding libc versions and platform stuff.</p>
+
+<p>It allows people to step through the code in a debugger.</p>
+:ET

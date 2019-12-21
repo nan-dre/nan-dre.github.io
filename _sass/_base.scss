@@ -2,16 +2,16 @@
 
 html[data-theme='light'] {
   --bg: #fff;
-  --bg-secondary: #fcfcfc;
   --headings: #050532;
   --text: #101010;
+  --meta: #a0a0a0;
 }
 
 html[data-theme='dark'] {
-  --bg: #080808;
-  --bg-secondary: #444;
-  --headings: #5269a2;
+  --bg: #121212;
+  --headings: #FFFFFF;
   --text: #bbb;
+  --meta: #c7c7c7;
 }
 
 
@@ -19,9 +19,7 @@ body {
     background-color: var(--bg);
 }
 
-.container {
-    background-color: var(--bg-secondary);
-}
+
 
 h1, h2, h3, h4, h5, h6 {
     color: var(--headings);
@@ -37,14 +35,14 @@ body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
-    color: --text;
+    color: var(--text);
 }
 p {
     text-align: justify;
     word-break: break-word;
 }
 a {
-    color: --text;
+    color: var(--text);
     text-decoration: none;
     cursor:pointer;
     &:hover {
@@ -102,7 +100,7 @@ hr {
     border-top: 2px solid $border-color;
 }
 
-@charset "utf-8";
+/* LAYOUT*/
 
 
 main {
@@ -114,13 +112,13 @@ main {
     .site-title {
         font-weight: 300;
         > a {
-            color: --headings;
+            color: var(--headings);
             text-decoration: none;
         }
     }
     .site-nav {
         > a {
-            color: --text;
+            color: var(--text);
             &:hover {
                 text-decoration: none;
             }
@@ -132,6 +130,11 @@ main {
             }
         }
     }
+    .button-container{
+      position: relative;
+      left: 800px;
+      top: 30px;
+    }
 }
 .posts {
     list-style: none;
@@ -139,12 +142,12 @@ main {
     > li {
         line-height: 1.75;
         span {
-            color: --text;
+            color: var(--text);
             margin-right: 1.5rem;
             font-size: $small-font-size;
         }
         a {
-            color: --text;
+            color: var(--text);
             text-decoration: none;
         }
     }
@@ -159,7 +162,7 @@ main {
     .post-meta {
         margin: 0;
         text-align: center;
-        color: $meta-color;
+        color: var(--meta);
         font-size: $small-font-size;
     }
 }

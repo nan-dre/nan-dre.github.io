@@ -1,3 +1,15 @@
+/*
+$bg-color: #fff ;
+$text-color: #333;
+$link-color:   #0074d9;
+$meta-color:   #a0a0a0;
+
+
+$bg-color-dark: #121212 ;
+$text-color-dark: #bbb;
+$link-color-dark: #5269a2;
+$meta-color-dark: ;
+*/
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700);
 .black { color: #111; }
 
@@ -33,23 +45,21 @@
 
 .maroon { color: #85144b; }
 
-html[data-theme='light'] { --bg: #fff; --bg-secondary: #fcfcfc; --headings: #050532; --text: #101010; }
+html[data-theme='light'] { --bg: #fff; --headings: #050532; --text: #101010; --meta: #a0a0a0; }
 
-html[data-theme='dark'] { --bg: #080808; --bg-secondary: #444; --headings: #5269a2; --text: #bbb; }
+html[data-theme='dark'] { --bg: #121212; --headings: #FFFFFF; --text: #bbb; --meta: #c7c7c7; }
 
 body { background-color: var(--bg); }
-
-.container { background-color: var(--bg-secondary); }
 
 h1, h2, h3, h4, h5, h6 { color: var(--headings); }
 
 p, strong, b, em, span, code, small { color: var(--text); }
 
-body { margin: 0; font-family: Merriweather, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: --text; }
+body { margin: 0; font-family: Merriweather, Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5; color: var(--text); }
 
 p { text-align: justify; word-break: break-word; }
 
-a { color: --text; text-decoration: none; cursor: pointer; }
+a { color: var(--text); text-decoration: none; cursor: pointer; }
 
 a:hover { text-decoration: underline; }
 
@@ -73,13 +83,14 @@ code { font-family: 'Courier New',Consolas,monopace; tab-size: 4; }
 
 hr { border: none; border-top: 2px solid #ddd; }
 
+/* LAYOUT*/
 main { max-width: 48rem; margin: 0 auto 3rem; padding: 0 2rem; }
 
 .site-header .site-title { font-weight: 300; }
 
-.site-header .site-title > a { color: --headings; text-decoration: none; }
+.site-header .site-title > a { color: var(--headings); text-decoration: none; }
 
-.site-header .site-nav > a { color: --text; }
+.site-header .site-nav > a { color: var(--text); }
 
 .site-header .site-nav > a:hover { text-decoration: none; }
 
@@ -87,19 +98,21 @@ main { max-width: 48rem; margin: 0 auto 3rem; padding: 0 2rem; }
 
 .site-header .site-nav > a + a { margin-left: 1rem; }
 
+.site-header .button-container { position: relative; left: 800px; top: 30px; }
+
 .posts { list-style: none; padding: 0; }
 
 .posts > li { line-height: 1.75; }
 
-.posts > li span { color: --text; margin-right: 1.5rem; font-size: 0.875rem; }
+.posts > li span { color: var(--text); margin-right: 1.5rem; font-size: 0.875rem; }
 
-.posts > li a { color: --text; text-decoration: none; }
+.posts > li a { color: var(--text); text-decoration: none; }
 
 .post { position: relative; }
 
 .post .post-header { text-align: center; font-size: xx-large; margin-bottom: 0; }
 
-.post .post-meta { margin: 0; text-align: center; color: #a0a0a0; font-size: 0.875rem; }
+.post .post-meta { margin: 0; text-align: center; color: var(--meta); font-size: 0.875rem; }
 
 @media screen and (max-width: 48rem) { .site-header .site-title, .site-header .site-nav { text-align: center; } }
 

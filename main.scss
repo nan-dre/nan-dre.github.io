@@ -7,11 +7,20 @@ $base-font-family: Merriweather, Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  0.875rem;
 $base-line-height: 1.5;
+$border-color: #ddd;
 
+/*
+$bg-color: #fff ;
 $text-color: #333;
 $link-color:   #0074d9;
 $meta-color:   #a0a0a0;
-$border-color: #ddd;
+
+
+$bg-color-dark: #121212 ;
+$text-color-dark: #bbb;
+$link-color-dark: #5269a2;
+$meta-color-dark: ;
+*/
 
 @import url(http://fonts.googleapis.com/css?family=Merriweather:400,400italic,700);
 @import "color";
