@@ -6,6 +6,18 @@ date: 2019-12-21 00:00:00
 
 # Contents
 1. [Introduction]({{page.url}}#introduction)
+2. [Consider writing the library in C and add wrappers]({{page.url}}#consider-writing-the-library-in-c-and-add-wrappers)
+3. [C is the lingua franca of programming. There are m]({{page.url}}#c-is-the-lingua-franca-of-programming.-there-are-m)
+4. [the start:]({{page.url}}#the-start:)
+5. [You might also consider writing the library in C++]({{page.url}}#you-might-also-consider-writing-the-library-in-c++)
+6. [Take into account the following aspects when writi]({{page.url}}#take-into-account-the-following-aspects-when-writi)
+7. [If you want to use another language for the implem]({{page.url}}#if-you-want-to-use-another-language-for-the-implem)
+8. [Consider providing an optional C++ wrapper.]({{page.url}}#consider-providing-an-optional-c++-wrapper.)
+9. [Basic things you can do when writing your C++ wrap]({{page.url}}#basic-things-you-can-do-when-writing-your-c++-wrap)
+10. [Try not to make the use of a build system mandator]({{page.url}}#try-not-to-make-the-use-of-a-build-system-mandator)
+11. [Ensure that people can easily compile the library ]({{page.url}}#ensure-that-people-can-easily-compile-the-library-)
+12. [This has many advantages such as:]({{page.url}}#this-has-many-advantages-such-as:)
+
 
 
 

@@ -1,4 +1,20 @@
-I"_)<h1 id="introduction">Introduction</h1>
+I"K0<h1 id="contents">Contents</h1>
+<ol>
+  <li><a href="/2019/12/21/Section-list-example/#introduction">Introduction</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#consider-writing-the-library-in-c-and-add-wrappers">Consider writing the library in C and add wrappers</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#c-is-the-lingua-franca-of-programming.-there-are-m">C is the lingua franca of programming. There are m</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#the-start:">the start:</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#you-might-also-consider-writing-the-library-in-c++">You might also consider writing the library in C++</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#take-into-account-the-following-aspects-when-writi">Take into account the following aspects when writi</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#if-you-want-to-use-another-language-for-the-implem">If you want to use another language for the implem</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#consider-providing-an-optional-c++-wrapper.">Consider providing an optional C++ wrapper.</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#basic-things-you-can-do-when-writing-your-c++-wrap">Basic things you can do when writing your C++ wrap</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#try-not-to-make-the-use-of-a-build-system-mandator">Try not to make the use of a build system mandator</a></li>
+  <li><a href="/2019/12/21/Section-list-example/#ensure-that-people-can-easily-compile-the-library-">Ensure that people can easily compile the library </a></li>
+  <li><a href="/2019/12/21/Section-list-example/#this-has-many-advantages-such-as:">This has many advantages such as:</a></li>
+</ol>
+
+<h1 id="introduction">Introduction</h1>
 
 <p>The aim of this article is to provide a series of good general advice and considerations on how to design and write libraries, particularly if portability, ease of use and performance are of concern.</p>
 
