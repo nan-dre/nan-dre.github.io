@@ -6,17 +6,16 @@ date: 2019-12-21 00:00:00
 
 # Contents
 1. [Introduction]({{page.url}}#introduction)
-2. [Consider writing the library in C and add wrappers]({{page.url}}#consider-writing-the-library-in-c-and-add-wrappers)
-3. [C is the lingua franca of programming. There are m]({{page.url}}#c-is-the-lingua-franca-of-programming.-there-are-m)
-4. [the start:]({{page.url}}#the-start:)
-5. [You might also consider writing the library in C++]({{page.url}}#you-might-also-consider-writing-the-library-in-c++)
-6. [Take into account the following aspects when writi]({{page.url}}#take-into-account-the-following-aspects-when-writi)
-7. [If you want to use another language for the implem]({{page.url}}#if-you-want-to-use-another-language-for-the-implem)
-8. [Consider providing an optional C++ wrapper.]({{page.url}}#consider-providing-an-optional-c++-wrapper.)
-9. [Basic things you can do when writing your C++ wrap]({{page.url}}#basic-things-you-can-do-when-writing-your-c++-wrap)
-10. [Try not to make the use of a build system mandator]({{page.url}}#try-not-to-make-the-use-of-a-build-system-mandator)
-11. [Ensure that people can easily compile the library ]({{page.url}}#ensure-that-people-can-easily-compile-the-library-)
-12. [This has many advantages such as:]({{page.url}}#this-has-many-advantages-such-as:)
+2. [Consider writing the library in C and add wrappers to other languages later.]({{page.url}}#consider-writing-the-library-in-c-and-add-wrappers-to-other-languages-later)
+3. [C is the lingua franca of programming. There are many advantages to writing your library in C from the start:]({{page.url}}#c-is-the-lingua-franca-of-programming-there-are-many-advantages-to-writing-your-library-in-c-from-the-start)
+4. [You might also consider writing the library in C++, be mindful however of the following drawbacks:]({{page.url}}#you-might-also-consider-writing-the-library-in-c-be-mindful-however-of-the-following-drawbacks)
+5. [Take into account the following aspects when writing your C library:]({{page.url}}#take-into-account-the-following-aspects-when-writing-your-c-library)
+6. [If you want to use another language for the implementation, consider keeping the interface in C.]({{page.url}}#if-you-want-to-use-another-language-for-the-implementation-consider-keeping-the-interface-in-c)
+7. [Consider providing an optional C++ wrapper.]({{page.url}}#consider-providing-an-optional-c-wrapper)
+8. [Basic things you can do when writing your C++ wrapper:]({{page.url}}#basic-things-you-can-do-when-writing-your-c-wrapper)
+9. [Try not to make the use of a build system mandatory.]({{page.url}}#try-not-to-make-the-use-of-a-build-system-mandatory)
+10. [Ensure that people can easily compile the library from source.]({{page.url}}#ensure-that-people-can-easily-compile-the-library-from-source)
+
 
 
 
@@ -127,10 +126,3 @@ If you do use a build system such as CMake or Make, try to use them in a standar
 # Ensure that people can easily compile the library from source.
 
 Distribute your libraries such that people can simply include the source files in their project and be done with it.
-## This has many advantages such as:
-
-Letting people easily reason about your library.
-
-Easy to include in cross-platform projects, no craziness regarding libc versions and platform stuff.
-
-It allows people to step through the code in a debugger.
