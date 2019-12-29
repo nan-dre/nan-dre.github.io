@@ -15,12 +15,6 @@ html[data-theme='dark'] {
 }
 
 
-body {
-    background-color: var(--bg);
-}
-
-
-
 h1, h2, h3, h4, h5, h6 {
     color: var(--headings);
 }
@@ -36,6 +30,7 @@ body {
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: var(--text);
+    background-color: var(--bg);
 }
 p {
     text-align: justify;
