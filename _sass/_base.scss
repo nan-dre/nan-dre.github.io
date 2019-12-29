@@ -102,6 +102,7 @@ main {
     max-width: 48rem;
     margin: 0 auto 3rem;
     padding: 0 2rem;
+    padding-top: 2rem;
 }
 .site-header {
     .site-title {
@@ -124,9 +125,6 @@ main {
                 margin-left: 1rem;
             }
         }
-    }
-    .button-container{
-      top: 30px;
     }
 }
 .posts {

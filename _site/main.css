@@ -70,7 +70,7 @@ code { font-family: 'Courier New',Consolas,monopace; tab-size: 4; }
 hr { border: none; border-top: 2px solid #ddd; }
 
 /* LAYOUT*/
-main { max-width: 48rem; margin: 0 auto 3rem; padding: 0 2rem; }
+main { max-width: 48rem; margin: 0 auto 3rem; padding: 0 2rem; padding-top: 2rem; }
 
 .site-header .site-title { font-weight: 300; }
 
@@ -83,8 +83,6 @@ main { max-width: 48rem; margin: 0 auto 3rem; padding: 0 2rem; }
 .site-header .site-nav > a.active { border-bottom: 2px solid #666; }
 
 .site-header .site-nav > a + a { margin-left: 1rem; }
-
-.site-header .button-container { top: 30px; }
 
 .posts { list-style: none; padding: 0; }
 
