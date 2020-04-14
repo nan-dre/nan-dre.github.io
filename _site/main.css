@@ -35,7 +35,7 @@
 
 html[data-theme='light'] { --bg: #fff; --headings: #000000; --text: #1B2431; --link: #116466; }
 
-html[data-theme='dark'] { --bg: #1b262c; --headings: #3282b8; --text: #bbb; --link: #0f4c75; }
+html[data-theme='dark'] { --bg: #191d24; --headings: #f2a365; --text: #ececec; --link: #30475e; }
 
 h1, h2, h3, h4, h5, h6 { color: var(--headings); }
 

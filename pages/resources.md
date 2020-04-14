@@ -8,8 +8,8 @@ permalink: /resources/
 
 ### Maths and IT related
 
-*[3b1b](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
-[minutephysics](https://www.youtube.com/user/minutephysics)
+* [3b1b](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
+* [minutephysics](https://www.youtube.com/user/minutephysics)
 
 ### Music related
 * [Sideways](https://www.youtube.com/channel/UCi7l9chXMljpUft67vw78qw)
