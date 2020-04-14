@@ -1,5 +1,5 @@
 title: Nandre's Blog
-baseurl: "/"
+baseurl: ""
 
 date_format: "%Y-%m-%d"
 
@@ -12,11 +12,4 @@ permalink: pretty
 github:
 twitter:
 
-#leave empty for disabled
-
 disqus_shortname: #fill this in for comments
-
-exclude:
-  - README.md
-  - LICENSE
-  - .gitignore
