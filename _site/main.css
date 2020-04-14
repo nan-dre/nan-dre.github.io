@@ -33,9 +33,9 @@
 
 .maroon { color: #85144b; }
 
-html[data-theme='light'] { --bg: #fff; --headings: #050532; --text: #101010; --meta: #a0a0a0; }
+html[data-theme='light'] { --bg: #fff; --headings: #000000; --text: #1B2431; --link: #116466; }
 
-html[data-theme='dark'] { --bg: #121212; --headings: #FFFFFF; --text: #bbb; --meta: #c7c7c7; }
+html[data-theme='dark'] { --bg: #1b262c; --headings: #3282b8; --text: #bbb; --link: #0f4c75; }
 
 h1, h2, h3, h4, h5, h6 { color: var(--headings); }
 
@@ -45,7 +45,7 @@ body { margin: 0; font-family: Merriweather, Helvetica, Arial, sans-serif; font-
 
 p { text-align: justify; word-break: break-word; }
 
-a { color: var(--text); text-decoration: none; cursor: pointer; }
+a { color: var(--link); text-decoration: none; cursor: pointer; }
 
 a:hover { text-decoration: underline; }
 
@@ -76,7 +76,7 @@ main { max-width: 48rem; margin: 0 auto 3rem; padding: 0 2rem; padding-top: 2rem
 
 .site-header .site-title > a { color: var(--headings); text-decoration: none; }
 
-.site-header .site-nav > a { color: var(--text); }
+.site-header .site-nav > a { color: var(--meta); }
 
 .site-header .site-nav > a:hover { text-decoration: none; }
 

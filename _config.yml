@@ -1,4 +1,4 @@
-title: Luca's Blog
+title: Nandre's Blog
 baseurl: ""
 
 date_format: "%Y-%m-%d"
@@ -15,3 +15,8 @@ twitter:
 #leave empty for disabled
 
 disqus_shortname: #fill this in for comments
+
+exclude:
+  - README.md
+  - LICENSE
+  - .gitignore

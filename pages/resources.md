@@ -4,5 +4,18 @@ title:     Resources
 permalink: /resources/
 ---
 
-- [Handmade Hero](https://hero.handmade.network/) - Handmade Hero is an ongoing project to create a complete, professional-quality game accompanied by videos that explain every single line of its source code.
-- [Jonathan Blow](https://twitter.com/Jonathan_Blow) - Game designer of Braid and The Witness
+# People I follow
+
+### Maths and IT related
+
+*[3b1b](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
+[minutephysics](https://www.youtube.com/user/minutephysics)
+
+### Music related
+* [Sideways](https://www.youtube.com/channel/UCi7l9chXMljpUft67vw78qw)
+* [8-bit Music Theory](https://www.youtube.com/channel/UCeZLO2VgbZHeDcongKzzfOw)
+* [Daniel Thrasher](https://www.youtube.com/user/muffinman3000)
+
+### Soft and productivity skills
+* [Matt D'Avella](https://www.youtube.com/user/blackboxfilmcompany)
+* [Charisma on command](https://www.youtube.com/user/charismaoncommand)

@@ -1,9 +1,5 @@
-vida
+My website
 ---------
 
-vida is a simple and beautiful jekyll theme.
-You can see demo [here](https://syaning.github.io/vida/).
-
-### License
-
-MIT
+Source for [nan-dre.github.io](nan-dre.github.io)
+Forked from [vida.](https://github.com/syaning/vida/)
