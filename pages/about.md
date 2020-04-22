@@ -14,4 +14,4 @@ I made this site to share some of my thoughts and projects that I hope people ca
 
 Romanian, Python, English, C++, JavaScript, HTML5, CSS
 
-[Here](/projects) is a list of the software I wrote.
+[Here](/software) is a list of the software I wrote.
