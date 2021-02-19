@@ -8,7 +8,7 @@ permalink: /resources/
 
 ### Maths and IT related
 
-* http://www.catb.org/~esr/faqs/smart-questions.html - a goldmine
+* [catb](http://www.catb.org/~esr/faqs/smart-questions.html) - a goldmine
 * [3b1b](https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw)
 * [minutephysics](https://www.youtube.com/user/minutephysics)
 

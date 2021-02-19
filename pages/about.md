@@ -12,6 +12,6 @@ I made this site to share some of my thoughts and projects that I hope people ca
 
 # Languages I know:
 
-Romanian, Python, English, C++, JavaScript, HTML5, CSS
+Romanian, Python, English, C++
 
 [Here](/software) is a list of software I wrote.
