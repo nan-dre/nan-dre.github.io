@@ -4,7 +4,7 @@ services:
     app:
         image: 'nandre/rpi-jekyll:latest'
         restart: always
-        command: jekyll serve -H 0.0.0.0 
+        command: jekyll serve -H 0.0.0.0
         ports:
             - '50000:4000'
         volumes:

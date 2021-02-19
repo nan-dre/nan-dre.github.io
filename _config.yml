@@ -2,6 +2,7 @@ title: Nandre's Blog
 baseurl: ""
 
 date_format: "%Y-%m-%d"
+exclude: [".gitignore", "Dockerfile", "docker-compose.yml", "LICENSE", "README.md", ".gitignore"]
 
 # Build settings
 kramdown:
@@ -9,7 +10,6 @@ kramdown:
   auto_ids: true
 permalink: pretty
 
-github:
-twitter:
+github: https://github.com/nan-dre
+twitter: https://twitter.com/nandre42
 
-disqus_shortname: #fill this in for comments

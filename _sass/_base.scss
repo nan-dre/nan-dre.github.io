@@ -8,10 +8,10 @@ html[data-theme='light'] {
 }
 
 html[data-theme='dark'] {
-  --bg: #191d24;
+  --bg: #222831;
   --headings: #f2a365;
   --text: #ececec;
-  --link: #30475e;
+  --link: #3282b8;
 }
 
 
@@ -105,6 +105,9 @@ main {
     padding-top: 2rem;
 }
 .site-header {
+    #theme-toggle{
+        margin-right: 2rem;
+    }
     .site-title {
         font-weight: 300;
         > a {

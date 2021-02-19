@@ -3,7 +3,6 @@ layout:    page
 title:     Resources
 permalink: /resources/
 ---
-
 # People I follow
 
 ### Maths and IT related
